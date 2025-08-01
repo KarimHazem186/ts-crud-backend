@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
