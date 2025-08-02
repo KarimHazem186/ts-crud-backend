@@ -11,7 +11,7 @@ const connectDB = async (): Promise<void> => {
     const conn: Mongoose = await mongoose.connect(mongoUri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    } as ConnectOptions);
+    } as ConnectOptions); // satisfies ConnectOptions // Type-safe alternative to "as"
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (err) {
