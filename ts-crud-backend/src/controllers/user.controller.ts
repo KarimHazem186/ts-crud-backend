@@ -4,20 +4,6 @@ import bcrypt from 'bcryptjs';
 import mongoose from "mongoose";
 import createHttpError from 'http-errors';
 
-// interface CreateUserBody { name: string; email: string; password: string }
-// export const createUser: RequestHandler<unknown, unknown, CreateUserBody> = async (req, res, next) => {
-//   try {
-//     const { name, email, password } = req.body;
-//     if (!name || !email || !password) throw createHttpError(400, 'Missing fields');
-//     const exists = await User.findOne({ email });
-//     if (exists) throw createHttpError(409, 'Email already in use');
-//     const user = await User.create({ name, email, password });
-//     res.status(201).json(user);
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
 
 // Define a type for the expected request body
 interface CreateUserRequest extends Request {
